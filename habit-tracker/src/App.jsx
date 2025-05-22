@@ -24,12 +24,16 @@ function App() {
   return (
     <div className="app">
       <h1>Habit Tracker</h1>
-      <HabitForm onAdd={addHabit} />
-      <HabitList habits={habits} 
-      onToggle={toggleHabit}
-      onDelete={deleteHabit}/>
+      <div className="habit-container">
+        <HabitForm onAdd={addHabit} />
+        <HabitList
+          habits={habits}
+          onToggle={toggleHabit}
+          onDelete={deleteHabit}
+        />
+      </div>
     </div>
-  );
+  );  
 }
 
 export default App;
